@@ -1,5 +1,7 @@
 import pandas as pd
 
+#Load and inspect dataset
+
 df = pd.read_csv("netflix_customer_churn.csv")
 
 
@@ -10,15 +12,21 @@ print("Churned value counts:\n", df["churned"].value_counts(dropna=False))
 
 df = df.dropna()
 
+# Prepare features and target
+
 feature_cols = ["age", "gender", "subscription_type", "watch_hours", "last_login_days", "region", "device", "monthly_fee", "payment_method", "number_of_profiles", "avg_watch_time_per_day", "favorite_genre"]
 
 X = df[feature_cols]
 y = df["churned"]
 
+# Encode categorical variables
+
 X = pd.get_dummies(X, drop_first=True)
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold, cross_val_score
+
+# Train and evaluate logistic regression model
 
 model = LogisticRegression(max_iter=1000)
 cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
@@ -176,4 +184,5 @@ plt.legend()
 plt.savefig("ROC.png", dpi=300, bbox_inches="tight")
 
 plt.show()
+
 
