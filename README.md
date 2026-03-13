@@ -1,4 +1,4 @@
-# Netflix Customer Churn Prediction
+# Customer Churn Prediction and Retention Analysis(Netflix Case Study)
 
 This repository contains a machine learning project for predicting customer churn on a Netflix-like OTT platform using Logistic Regression.
 
