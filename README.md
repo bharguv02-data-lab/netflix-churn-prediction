@@ -58,3 +58,11 @@ Main implementation file:
 
 - Mean ROC-AUC (10-fold CV): **~0.97**
 - Engagement and inactivity are the strongest churn drivers
+
+## Output Visualizations
+
+### Sigmoid Curve
+![Sigmoid Curve](SIGMOID.png)
+
+### ROC Curve
+![ROC Curve](ROC.png)
