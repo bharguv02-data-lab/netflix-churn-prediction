@@ -50,7 +50,7 @@ The dataset used in this project is a **synthetic customer churn dataset** desig
 ## Code
 
 Main implementation file:
-- `codeline_1.py`
+- `churn_analysis&pridiction_model.py`
 
 ---
 
